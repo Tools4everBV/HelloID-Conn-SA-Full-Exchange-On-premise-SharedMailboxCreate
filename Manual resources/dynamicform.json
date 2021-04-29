@@ -1,0 +1,86 @@
+[
+    {
+        "label":  "Details",
+        "fields":  [
+                       {
+                           "key":  "commonname",
+                           "templateOptions":  {
+                                                   "label":  "Shared Mailbox Name",
+                                                   "placeholder":  "Gedeelde Mailboxnaam",
+                                                   "required":  true,
+                                                   "minLength":  2
+                                               },
+                           "type":  "input",
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true,
+                           "requiresKey":  true
+                       }
+                   ]
+    },
+    {
+        "label":  "Naming",
+        "fields":  [
+                       {
+                           "key":  "naming",
+                           "templateOptions":  {
+                                                   "label":  "Naming",
+                                                   "required":  true,
+                                                   "grid":  {
+                                                                "columns":  [
+                                                                                {
+                                                                                    "headerName":  "Displayname",
+                                                                                    "field":  "displayname"
+                                                                                },
+                                                                                {
+                                                                                    "headerName":  "Samaccountname",
+                                                                                    "field":  "samaccountname"
+                                                                                },
+                                                                                {
+                                                                                    "headerName":  "Mail",
+                                                                                    "field":  "mail"
+                                                                                },
+                                                                                {
+                                                                                    "headerName":  "User Principal Name",
+                                                                                    "field":  "userPrincipalName"
+                                                                                },
+                                                                                {
+                                                                                    "headerName":  "Common Name",
+                                                                                    "field":  "commonName"
+                                                                                },
+                                                                                {
+                                                                                    "headerName":  "Alias",
+                                                                                    "field":  "alias"
+                                                                                }
+                                                                            ],
+                                                                "height":  300,
+                                                                "rowSelection":  "single"
+                                                            },
+                                                   "dataSourceConfig":  {
+                                                                            "dataSourceGuid":  "$dataSourceGuid_0",
+                                                                            "input":  {
+                                                                                          "propertyInputs":  [
+                                                                                                                 {
+                                                                                                                     "propertyName":  "CommonName",
+                                                                                                                     "otherFieldValue":  {
+                                                                                                                                             "otherFieldKey":  "commonname"
+                                                                                                                                         }
+                                                                                                                 }
+                                                                                                             ]
+                                                                                      }
+                                                                        },
+                                                   "defaultSelectorProperty":  "displayname",
+                                                   "useDefault":  true
+                                               },
+                           "validation":  {
+                                              "messages":  {
+                                                               "required":  "Select the row to continue"
+                                                           }
+                                          },
+                           "type":  "grid",
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true,
+                           "requiresKey":  true
+                       }
+                   ]
+    }
+]
