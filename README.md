@@ -30,20 +30,19 @@ After the all-in-one PowerShell script has run and created all the required reso
  1. Update the following [user defined variables](https://docs.helloid.com/hc/en-us/articles/360014169933-How-to-Create-and-Manage-User-Defined-Variables)
 <table>
   <tr><td><strong>Variable name</strong></td><td><strong>Example value</strong></td><td><strong>Description</strong></td></tr>
-  <tr><td>ADsharedMailboxOU</td><td>[{ "OU": "OU=Shared Mailboxes,OU=Users,DC=domain,DC=local"}]</td><td>Active Directory OU where the corresponding AD group is created</td></tr>
-  <tr><td>ExchangeConnectionUri</td><td>http://exchangeserver/powershell</td><td>Exchangeserver where distribution is created</td></tr>
-  <tr><td>ExchangeAdminUsername</td><td>domain/user</td><td>Exchangeserver admin account</td></tr>
-  <tr><td>ExchangeAdminPassword</td><td>********</td><td>Exchangeserver admin password</td></tr>
+  <tr><td>ExchangeConnectionUri</td><td>http://exchangeserver/powershell</td><td>Exchange server</td></tr>
+  <tr><td>ExchangeAdminUsername</td><td>domain/user</td><td>Exchange server admin account</td></tr>
+  <tr><td>ExchangeAdminPassword</td><td>********</td><td>Exchange server admin password</td></tr>
 </table>
 
 ## Manual resources
 This Delegated Form uses the following resources in order to run
 
-### Powershell data source 'Exchange-create-check-names-sharedmailbox'
-This Powershell data source runs an Active Directory query to verify the name of the shared mailbox is not already present.
+### Powershell data source 'Exchange-get-identity-hide-unhide'
+This Powershell data source runs a query to search the name of the mailbox that must be hided/unhided from the GAL.
 
-### Delegated form task 'Exchange-on-premise-create-shared-mailbox'
-This delegated form task will create the shared mailbox in Exchange with a corresponding disabled user.
+### Delegated form task 'Exchange On-premise Hide-UnHide from addresslist'
+This delegated form task will hide/unhide a mailbox from the GAL.
 
 # HelloID Docs
 The official HelloID documentation can be found at: https://docs.helloid.com/
