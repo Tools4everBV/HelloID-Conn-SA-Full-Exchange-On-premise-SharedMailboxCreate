@@ -1,9 +1,15 @@
 ## Description
-This HelloID Service Automation Delegated Form provides Exchange On-Premise Distribution Group functionality. The following options are available:
+This HelloID Service Automation Delegated Form provides Exchange On-Premise Shared Mailbox functionality. The following options are available:
  1. Give a name for a new shared mailbox to create
  2. If the name already exists a iteration is added or you can adjust the name
  3. Confirm the names generated
  4. Create the shared mailbox
+
+## Versioning
+| Version | Description | Date |
+| - | - | - |
+| 1.0.1   | Added version number and updated all-in-one script | 2021/11/16  |
+| 1.0.0   | Initial release | 2021/04/29  |
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -44,5 +50,8 @@ This Powershell data source runs an Active Directory query to verify the name of
 ### Delegated form task 'Exchange-on-premise-create-shared-mailbox'
 This delegated form task will create the shared mailbox in Exchange with a corresponding disabled user.
 
-# HelloID Docs
+## Getting help
+_If you need help, feel free to ask questions on our [forum](https://forum.helloid.com/forum/helloid-connectors/service-automation/578-helloid-sa-exchange-on-premises-create-shared-mailbox)_
+
+## HelloID Docs
 The official HelloID documentation can be found at: https://docs.helloid.com/
